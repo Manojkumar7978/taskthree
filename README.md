@@ -11,11 +11,21 @@ This is a web application that allows users to find and order recipes based on t
 
 
 ## Features
-
+- Firebase Google Login integration for user authentication
+- Bottom navigation with options: Recipe, Calorie, Diet
+- Recipe screen with search functionality and a list of recipes in card format
 
 
 
 ## Technologies Used
+- HTML
+- CSS
+- JavaScript
+- React JS
+- Chakra UI
+- React-Icons
+- React-Router-dom
+- Firebase Authontication
 
 
 ## Setup Instructions

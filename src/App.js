@@ -8,15 +8,17 @@ import { Routes, Route } from "react-router-dom";
 
 
 function App() {
+  let app_key = 'c673dbff151ac14e9a6f38a5f5666fb3'
+  let app_id = '484fbcf6'
 
-  let [search, setSearch] = useState(null)
+  let [search, setSearch] = useState('Indian')
   let [user, setUser] = useState(null)
   useEffect(() => {
     setUser(localStorage.getItem('email'))
   }, [])
 
   return (
-    <recipeContext.Provider value={{ search, setSearch, user, setUser }}>
+    <recipeContext.Provider value={{ search, setSearch, user, setUser, app_id, app_key }}>
 
       <div className="App" style={{ maxWidth: '1200px', marginInline: 'auto' }}>
         <Nav />

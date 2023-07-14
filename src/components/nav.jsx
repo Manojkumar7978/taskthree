@@ -88,7 +88,7 @@ const Nav = () => {
                                     justifySelf="self-start"
                                     onClick={mobileNav.onClose}
                                 />
-                                <Heading size='lg' color='#E0115F' >
+                                <Heading size='lg' color='#3eb489' >
                                     <Link to={'/'}>Recipe</Link>
                                 </Heading>
                                 <Link to={'/calorie'} style={{ fontWeight: 'bolder', color: 'white' }}>Calorie</Link>
@@ -105,7 +105,7 @@ const Nav = () => {
                             alignItems='center'
 
                         >
-                            <Heading size='lg' color='#E0115F' >
+                            <Heading size='lg' color='#3eb489' >
                                 <Link to={'/'}>Recipe</Link>
                             </Heading>
                             <Link to={'/calorie'} style={{ fontWeight: 'bolder', color: 'white' }}>Calorie</Link>
@@ -124,7 +124,7 @@ const Nav = () => {
                             </InputLeftElement>
                             <Input onChange={(e) => {
                                 handelchange(e)
-                            }} color="gray.800" borderRadius='20px' bg='white' maxW='250px' type="text" placeholder="Search whatever you want" />
+                            }} color="gray.800" borderRadius='20px' bg='white' maxW='250px' type="text" placeholder="Search Recipe" />
                         </InputGroup>
 
                         {

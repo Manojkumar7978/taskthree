@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Button, Image, Box, Heading, chakra, useToast } from '@chakra-ui/react';
+import { Button, Image, Box, Heading, chakra, useToast, CircularProgress, CircularProgressLabel } from '@chakra-ui/react';
 import recipeContext from './context';
 
 const Card = ({ el, id }) => {
@@ -36,14 +36,23 @@ const Card = ({ el, id }) => {
             overflow="hidden"
             boxShadow="md"
             p={4}
-            maxW="200px"
+            maxW="250px"
             mx="auto"
         >
             <Image borderRadius={'4'} src={el.recipe.image} alt={el.recipe.label} />
             <chakra.div h='70px'>
-                <Heading as="h2" size="sm" mt={2} mb={4}>
+                <Heading as="h2" size="sm" mt={2} mb={6}>
                     {el.recipe.label}
                 </Heading>
+            </chakra.div>
+            <chakra.div mb={4} display={'flex'} justifyContent={'space-between'} alignItems={'center'}>
+                <div><label style={{ color: 'green', fontSize: '16px' }} >Protein:</label> <CircularProgress size={'40px'} value={(el.recipe.digest[2].total / 900) * 100} color='green.500'>
+                    <CircularProgressLabel>{Math.round(el.recipe.digest[2].total)}</CircularProgressLabel>
+                </CircularProgress></div>
+                <div><label style={{ color: 'green', fontSize: '16px' }}>Fat:</label> <CircularProgress size={'40px'} value={(el.recipe.digest[0].total / 900) * 100} color='green.500'>
+                    <CircularProgressLabel>{Math.round(el.recipe.digest[0].total)}</CircularProgressLabel>
+                </CircularProgress></div>
+
             </chakra.div>
             <Button onClick={handelclick} size={'sm'} colorScheme="red" w="full">
                 Order Now
